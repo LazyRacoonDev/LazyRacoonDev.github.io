@@ -80,53 +80,125 @@
         <div class="row gy-4">
           <div class="col-md-6">
 
-            <div class="row justify-content-between gy-4">
-              <div class="col-lg-5">
-                <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <!-- skills-icons.html -->
+            <div class="skills-icons-section">
+              <h5>Programming Languages</h5>
+              <div class="icon-row">
+                <div class="icon-box">
+                  <img src="https://cdn.simpleicons.org/c" alt="C">
+                  <span>C</span>
+                </div>
+                <div class="icon-box">
+                  <img src="https://cdn.simpleicons.org/cplusplus" alt="C++">
+                  <span>C++</span>
+                </div>
+                <div class="icon-box">
+                  <!-- C# usando un PNG público (puedes cambiarlo por un SVG si prefieres) -->
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C#">
+                  <span>C#</span>
+                </div>
+                <div class="icon-box">
+                  <img src="https://cdn.simpleicons.org/python" alt="Python">
+                  <span>Python</span>
+                </div>
               </div>
-              <div class="col-lg-7 about-info">
-                <p><strong>Name: </strong> <span>Hugo Castaño Cuéllar</span></p>
-                <p><strong>Profile: </strong> <span>Game Designer</span></p>
-                <p><strong>Email: </strong> <span>hugocastanocuellar@gmail.com</span></p>
-                <p><strong>Phone: </strong> <span>+34 611 482 911</span></p>
+            
+              <h5>Game Engines</h5>
+              <div class="icon-row">
+                <div class="icon-box">
+                  <img src="https://cdn.simpleicons.org/godotengine" alt="Godot">
+                  <span>Godot</span>
+                </div>
+                <div class="icon-box">
+                  <img src="https://cdn.simpleicons.org/unity" alt="Unity">
+                  <span>Unity</span>
+                </div>
+              </div>
+            
+              <h5>Software</h5>
+              <div class="icon-row">
+                <div class="icon-box">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1200px-GitHub_Invertocat_Logo.svg.png" alt="Github">
+                  <span>Github</span>
+                </div>
+                <div class="icon-box">
+                  <img src="https://cdn.simpleicons.org/blender" alt="Blender">
+                  <span>Blender</span>
+                </div>
+                <div class="icon-box">
+                  <!-- Maya, usando Autodesk -->
+                  <img src="https://cdn.simpleicons.org/autodesk" alt="Maya">
+                  <span>Maya</span>
+                </div>
+                <div class="icon-box">
+                  <!-- Photoshop: SVG público -->
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop">
+                  <span>Photoshop</span>
+                </div>
+                <div class="icon-box">
+                  <!-- Audacity logo de Wikipedia -->
+                  <img src="https://images.sftcdn.net/images/t_app-icon-m/p/c3942378-96bf-11e6-a12e-00163ec9f5fa/316038906/audacity-icon.png" alt="Audacity">
+                  <span>Audacity</span>
+                </div>
+                <div class="icon-box">
+                  <!-- FL Studio logo PNG de Wikimedia (SVG no disponible) -->
+                  <img src="https://upload.wikimedia.org/wikipedia/pt/7/7e/Fl_studio_logo.png" alt="FL Studio">
+                  <span>FL Studio</span>
+                </div>
               </div>
             </div>
-
-            <!--
-            <div class="skills-content skills-animation">
-
-              <h5>Skills</h5>
-
-              <div class="progress">
-                <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-
-            </div>
-            -->
+            
+            <style>
+            .skills-icons-section {
+              max-width: 600px;
+              margin: 0 auto;
+              padding: 20px 0;
+            }
+            .skills-icons-section h5 {
+              font-size: 1.1em;
+              margin-top: 1.5em;
+              margin-bottom: 0.5em;
+              font-weight: bold;
+              letter-spacing: 1px;
+            }
+            .icon-row {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 25px;
+              margin-bottom: 1.2em;
+            }
+            .icon-box {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              width: 70px;
+            }
+            .icon-box img {
+              width: 40px;
+              height: 40px;
+              object-fit: contain;
+              margin-bottom: 6px;
+              filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10));
+            }
+            .icon-box span {
+              font-size: 0.93em;
+              text-align: center;
+              margin-top: 2px;
+            }
+            @media (max-width: 480px) {
+              .icon-row {
+                gap: 16px;
+              }
+              .icon-box {
+                width: 54px;
+              }
+              .icon-box img {
+                width: 28px;
+                height: 28px;
+              }
+            }
+            </style>
+            
           </div>
 
           <div class="col-md-6">
@@ -135,10 +207,25 @@
               <p>
                 Hello, my name is Hugo Castaño, I am a young Game Designer from Spain, currently studying Videogame Design and Development in CITM - UPC. 
                 <p>
-                My focus is Game Design, from mechanics to narrative, including level design. I love everything about it and I'm always aim to prove myself and keep on learning.
+                My journey with video games began at the age of five with my first experience on a Game Boy. Two years later, at the age of seven, I received my very own console—a Nintendo 3DS—which truly sparked my passion for gaming. My most memorable experience as a player has been with Monster Hunter 4 Ultimate, a game that had a huge impact on me and made me want to pursue a future in Game Design.
+                <p>
+                My main focus is Game Design, from mechanics and systems to narrative and level design. I love everything about creating games, and I'm always eager to challenge myself and keep learning as i grow up.
                 <p>
                 In my free time I enjoy playing video games, reading books, and listening to music. Additionally, I also love writing and designing Dungeons & Dragons adventures and campaigns, and I often serve as a Dungeon Master for both premade and homebrewed ones.
               </p>
+              <div class="get-to-know-me mt-4">
+                <h5>Get to know me better:</h5>
+                <ul style="list-style:none; padding-left:0; margin-bottom:0;">
+                  <li>
+                    📚 Books I've read:
+                    <a href="https://goodreads.com/hugocastano" target="_blank" rel="noopener">Goodreads</a>
+                  </li>
+                  <li>
+                    🎮 Games I've played:
+                    <a href="https://backloggd.com/u/HugoCastano/" target="_blank" rel="noopener">Backloggd</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -229,7 +316,6 @@
               <div class="portfolio-info">
                 <h4>Stelar</h4>
                 <p>Game developed for the 1st Indie Games TRS game jam</p>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -238,7 +324,6 @@
               <div class="portfolio-info">
                 <h4>Karoshi</h4>
                 <p>Game developed for the 7th CITM Game Jam</p>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -247,7 +332,6 @@
               <div class="portfolio-info">
                 <h4>Mindfall: The Last Threshold</h4>
                 <p>Game developed for the 8th CITM Game Jam</p>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
             
@@ -256,7 +340,6 @@
               <div class="portfolio-info">
                 <h4>Puddle's Legacy</h4>
                 <p>Game developed for Project 2</p>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
 
             <!--  TEMPLATE DE ITEM
@@ -301,19 +384,26 @@
               </a>
             </div>
 
-            <!-- Twitter (X) -->
-            <div class="col-lg-2 col-md-3 text-center">
-              <a href="https://x.com/Lazy_RAC0ON" target="_blank">
-                <img src="assets/img/redes/x.jpg" alt="Twitter" class="img-fluid" style="width: 50px;">
-                <p>Twitter (X)</p>
-              </a>
-            </div>
-
             <!-- Itch.io -->
             <div class="col-lg-2 col-md-3 text-center">
               <a href="https://lazyracoondev.itch.io" target="_blank">
                 <img src="assets/img/redes/itch.jpg" alt="Itch.io" class="img-fluid" style="width: 50px;">
                 <p>Itch.io</p>
+              </a>
+            </div>
+
+            <!-- Github -->
+            <div class="col-lg-2 col-md-3 text-center">
+              <a href="https://github.com/LazyRacoonDev" target="_blank">
+                <img src="assets/img/redes/github.jpg" alt="Github" class="img-fluid" style="width: 50px;">
+                <p>Github</p>
+              </a>
+            </div>
+            <!-- Twitter (X) -->
+            <div class="col-lg-2 col-md-3 text-center">
+              <a href="https://x.com/Lazy_RAC0ON" target="_blank">
+                <img src="assets/img/redes/x.jpg" alt="Twitter" class="img-fluid" style="width: 50px;">
+                <p>Twitter (X)</p>
               </a>
             </div>
 
