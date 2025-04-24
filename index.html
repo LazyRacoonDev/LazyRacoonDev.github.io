@@ -34,6 +34,35 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      z-index: 1;
+      background: #111; /* fallback color */
+    }
+    #hero-bg,
+    #hero-bg-next {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 1;
+      transition: opacity 1s;
+      pointer-events: none;
+    }
+    #hero-bg-next {
+      opacity: 0;
+    }
+    #hero > .container {
+      position: relative;
+      z-index: 2;
+    }
+    </style>
 </head>
 
 <body class="index-page">
@@ -44,7 +73,7 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">DevFolio</h1>
+        <h1 class="sitename">Hugo Castaño Cuéllar</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -64,14 +93,16 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background" style="background-color: rgb(255, 0, 0);">
-
+    <section id="hero" class="hero section dark-background">
+      <img id="hero-bg" src="assets/img/baldurs.jpg" alt="" loading="lazy">
+      <img id="hero-bg-next" src="" alt="" loading="lazy">
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
         <h2>Hugo Castaño </h2>
-        <p><span class="typed" data-typed-items="Game Designer"></span></p>
+        <p>
+          <span class="typed" data-typed-items="Game Designer, Site in development"></span>
+        </p>
       </div>
-
-    </section><!-- /Hero Section -->
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -80,6 +111,11 @@
 
         <div class="row gy-4">
           <div class="col-md-6">
+
+            <!-- Foto tuya aquí -->
+            <div class="text-center mb-4">
+              <img src="assets/img/perfil.jpg" alt="Hugo Castaño photo" class="img-fluid rounded-3 shadow" style="max-width: 220px;">
+            </div>
 
             <!-- skills-icons.html -->
             <div class="skills-icons-section">
@@ -465,6 +501,36 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    const images = [
+      'assets/img/baldurs.jpg',
+      'assets/img/sigil.jpg',
+      // Puedes añadir más imágenes aquí, separadas por comas
+      // 'assets/img/otra.jpg'
+    ];
+    let current = 0;
+    const bg1 = document.getElementById('hero-bg');
+    const bg2 = document.getElementById('hero-bg-next');
+    
+    function fadeToNextImage() {
+      // Siguiente índice (circular)
+      const next = (current + 1) % images.length;
+      // Pon la siguiente imagen en el overlay
+      bg2.src = images[next];
+      bg2.style.opacity = 1;
+      // Tras el fade, cambia la base y esconde el overlay
+      setTimeout(() => {
+        bg1.src = images[next];
+        bg2.style.opacity = 0;
+        current = next;
+      }, 1000); // Tiempo de fade (1s como en el CSS)
+    }
+    
+    // Cambia cada 6 segundos
+    setInterval(fadeToNextImage, 6000);
+    </script>
+    
 </body>
 
 </html>
